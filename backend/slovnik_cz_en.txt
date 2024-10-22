@@ -1,140 +1,500 @@
-hello	ahoj
-goodbye	sbohem
-please	prosím
-thank you	děkuji
-yes	ano
-no	ne
-morning	ráno
-night	noc
-food	jídlo
-water	voda
-house	dům
-car	auto
-book	kniha
-friend	přítel
-family	rodina
-apple	jablko
-orange	pomeranč
-banana	banán
-grape	hrozen
-dog	pes
-cat	kočka
-bird	pták
-fish	ryba
-computer	počítač
-phone	telefon
-table	stůl
-chair	židle
-window	okno
-door	dveře
-school	škola
-university	univerzita
-teacher	učitel
-student	student
-work	práce
-job	zaměstnání
-money	peníze
-bank	banka
-city	město
-village	vesnice
-country	země
-world	svět
-sun	slunce
-moon	měsíc
-star	hvězda
-ocean	oceán
-river	řeka
-mountain	hora
-forest	les
-tree	strom
-flower	květina
-garden	zahrada
-street	ulice
-road	silnice
-bridge	most
-airport	letiště
-train	vlak
-bus	autobus
-station	stanice
-ticket	lístek
-music	hudba
-song	píseň
-dance	tanec
-game	hra
-sport	sport
-football	fotbal
-basketball	basketbal
-tennis	tenis
-hockey	hokej
-run	běh
-walk	chůze
-swim	plavat
-read	číst
-write	psát
-draw	kreslit
-paint	malovat
-sing	zpívat
-eat	jíst
-drink	pít
-sleep	spát
-wake	vzbudit
-love	láska
-hate	nenávist
-happy	šťastný
-sad	smutný
-angry	rozzlobený
-bored	znuděný
-tired	unavený
-scared	vyděšený
-excited	nadšený
-beautiful	krásný
-ugly	ošklivý
-big	velký
-small	malý
-fast	rychlý
-slow	pomalý
-hot	horký
-cold	studený
-warm	teplý
-cool	chladný
-young	mladý
-old	starý
-new	nový
-expensive	drahý
-cheap	levný
-clean	čistý
-dirty	špinavý
-strong	silný
-weak	slabý
-hard	tvrdý
-soft	měkký
-sweet	sladký
-bitter	hořký
-salty	slaný
-sour	kyselý
-loud	hlasitý
-quiet	tichý
-full	plný
-empty	prázdný
-open	otevřený
-closed	zavřený
-high	vysoký
-low	nízký
-long	dlouhý
-short	krátký
-left	vlevo
-right	vpravo
-up	nahoru
-down	dolů
-inside	uvnitř
-outside	venku
-day	den
-evening	večer
-noon	poledne
-midnight	půlnoc
-week	týden
-month	měsíc
-year	rok
-yesterday	včera
-today	dnes
-tomorrow	zítra
+hello=ahoj
+goodbye=sbohem
+please=prosím
+thank you=děkuji
+yes=ano
+no=ne
+morning=ráno
+night=noc
+food=jídlo
+water=voda
+house=dům
+car=auto
+book=kniha
+friend=přítel
+family=rodina
+apple=jablko
+orange=pomeranč
+banana=banán
+grape=hrozen
+dog=pes
+cat=kočka
+bird=pták
+fish=ryba
+computer=počítač
+phone=telefon
+table=stůl
+chair=židle
+window=okno
+door=dveře
+school=škola
+university=univerzita
+teacher=učitel
+student=student
+work=práce
+job=zaměstnání
+money=peníze
+bank=banka
+city=město
+village=vesnice
+country=země
+world=svět
+sun=slunce
+moon=měsíc
+star=hvězda
+ocean=oceán
+river=řeka
+mountain=hora
+forest=les
+tree=strom
+flower=květina
+garden=zahrada
+street=ulice
+road=silnice
+bridge=most
+airport=letiště
+train=vlak
+bus=autobus
+station=stanice
+ticket=lístek
+music=hudba
+song=píseň
+dance=tanec
+game=hra
+sport=sport
+football=fotbal
+basketball=basketbal
+tennis=tenis
+hockey=hokej
+run=běh
+walk=chůze
+swim=plavat
+read=číst
+write=psát
+draw=kreslit
+paint=malovat
+sing=zpívat
+eat=jíst
+drink=pít
+sleep=spát
+wake=vzbudit
+love=láska
+hate=nenávist
+happy=šťastný
+sad=smutný
+angry=rozzlobený
+bored=znuděný
+tired=unavený
+scared=vyděšený
+excited=nadšený
+beautiful=krásný
+ugly=ošklivý
+big=velký
+small=malý
+fast=rychlý
+slow=pomalý
+hot=horký
+cold=studený
+warm=teplý
+cool=chladný
+young=mladý
+old=starý
+new=nový
+expensive=drahý
+cheap=levný
+clean=čistý
+dirty=špinavý
+strong=silný
+weak=slabý
+hard=tvrdý
+soft=měkký
+sweet=sladký
+bitter=hořký
+salty=slaný
+sour=kyselý
+loud=hlasitý
+quiet=tichý
+full=plný
+empty=prázdný
+open=otevřený
+closed=zavřený
+high=vysoký
+low=nízký
+long=dlouhý
+short=krátký
+left=vlevo
+right=vpravo
+up=nahoru
+down=dolů
+inside=uvnitř
+outside=venku
+day=den
+evening=večer
+noon=poledne
+midnight=půlnoc
+week=týden
+month=měsíc
+year=rok
+yesterday=včera
+today=dnes
+tomorrow=zítra
+hello=ahoj
+goodbye=sbohem
+please=prosím
+thank you=děkuji
+yes=ano
+no=ne
+morning=ráno
+night=noc
+food=jídlo
+water=voda
+house=dům
+car=auto
+book=kniha
+friend=přítel
+family=rodina
+apple=jablko
+orange=pomeranč
+banana=banán
+grape=hrozen
+dog=pes
+cat=kočka
+bird=pták
+fish=ryba
+computer=počítač
+phone=telefon
+table=stůl
+chair=židle
+window=okno
+door=dveře
+school=škola
+university=univerzita
+teacher=učitel
+student=student
+work=práce
+job=zaměstnání
+money=peníze
+bank=banka
+city=město
+village=vesnice
+country=země
+world=svět
+sun=slunce
+moon=měsíc
+star=hvězda
+ocean=oceán
+river=řeka
+mountain=hora
+forest=les
+tree=strom
+flower=květina
+garden=zahrada
+street=ulice
+road=silnice
+bridge=most
+airport=letiště
+train=vlak
+bus=autobus
+station=stanice
+ticket=lístek
+music=hudba
+song=píseň
+dance=tanec
+game=hra
+sport=sport
+football=fotbal
+basketball=basketbal
+tennis=tenis
+hockey=hokej
+run=běh
+walk=chůze
+swim=plavat
+read=číst
+write=psát
+draw=kreslit
+paint=malovat
+sing=zpívat
+eat=jíst
+drink=pít
+sleep=spát
+wake=vzbudit
+love=láska
+hate=nenávist
+happy=šťastný
+sad=smutný
+angry=rozzlobený
+bored=znuděný
+tired=unavený
+scared=vyděšený
+excited=nadšený
+beautiful=krásný
+ugly=ošklivý
+big=velký
+small=malý
+fast=rychlý
+slow=pomalý
+hot=horký
+cold=studený
+warm=teplý
+cool=chladný
+young=mladý
+old=starý
+new=nový
+expensive=drahý
+cheap=levný
+clean=čistý
+dirty=špinavý
+strong=silný
+weak=slabý
+hard=tvrdý
+soft=měkký
+sweet=sladký
+bitter=hořký
+salty=slaný
+sour=kyselý
+loud=hlasitý
+quiet=tichý
+full=plný
+empty=prázdný
+open=otevřený
+closed=zavřený
+high=vysoký
+low=nízký
+long=dlouhý
+short=krátký
+left=vlevo
+right=vpravo
+up=nahoru
+down=dolů
+inside=uvnitř
+outside=venku
+day=den
+evening=večer
+noon=poledne
+midnight=půlnoc
+week=týden
+month=měsíc
+year=rok
+yesterday=včera
+today=dnes
+tomorrow=zítra
+hello=ahoj
+goodbye=sbohem
+please=prosím
+thank you=děkuji
+yes=ano
+no=ne
+morning=ráno
+night=noc
+food=jídlo
+water=voda
+house=dům
+car=auto
+book=kniha
+friend=přítel
+family=rodina
+apple=jablko
+orange=pomeranč
+banana=banán
+grape=hrozen
+dog=pes
+cat=kočka
+bird=pták
+fish=ryba
+computer=počítač
+phone=telefon
+table=stůl
+chair=židle
+window=okno
+door=dveře
+school=škola
+university=univerzita
+teacher=učitel
+student=student
+work=práce
+job=zaměstnání
+money=peníze
+bank=banka
+city=město
+village=vesnice
+country=země
+world=svět
+sun=slunce
+moon=měsíc
+star=hvězda
+ocean=oceán
+river=řeka
+mountain=hora
+forest=les
+tree=strom
+flower=květina
+garden=zahrada
+street=ulice
+road=silnice
+bridge=most
+airport=letiště
+train=vlak
+bus=autobus
+station=stanice
+ticket=lístek
+music=hudba
+song=píseň
+dance=tanec
+game=hra
+sport=sport
+football=fotbal
+basketball=basketbal
+tennis=tenis
+hockey=hokej
+run=běh
+walk=chůze
+swim=plavat
+read=číst
+write=psát
+draw=kreslit
+paint=malovat
+sing=zpívat
+eat=jíst
+drink=pít
+sleep=spát
+wake=vzbudit
+love=láska
+hate=nenávist
+happy=šťastný
+sad=smutný
+angry=rozzlobený
+bored=znuděný
+tired=unavený
+scared=vyděšený
+excited=nadšený
+beautiful=krásný
+ugly=ošklivý
+big=velký
+small=malý
+fast=rychlý
+slow=pomalý
+hot=horký
+cold=studený
+warm=teplý
+cool=chladný
+young=mladý
+old=starý
+new=nový
+expensive=drahý
+cheap=levný
+clean=čistý
+dirty=špinavý
+strong=silný
+weak=slabý
+hard=tvrdý
+soft=měkký
+sweet=sladký
+bitter=hořký
+salty=slaný
+sour=kyselý
+loud=hlasitý
+quiet=tichý
+full=plný
+empty=prázdný
+open=otevřený
+closed=zavřený
+high=vysoký
+low=nízký
+long=dlouhý
+short=krátký
+left=vlevo
+right=vpravo
+up=nahoru
+down=dolů
+inside=uvnitř
+outside=venku
+day=den
+evening=večer
+noon=poledne
+midnight=půlnoc
+week=týden
+month=měsíc
+year=rok
+yesterday=včera
+today=dnes
+tomorrow=zítra
+hello=ahoj
+goodbye=sbohem
+please=prosím
+thank you=děkuji
+yes=ano
+no=ne
+morning=ráno
+night=noc
+food=jídlo
+water=voda
+house=dům
+car=auto
+book=kniha
+friend=přítel
+family=rodina
+apple=jablko
+orange=pomeranč
+banana=banán
+grape=hrozen
+dog=pes
+cat=kočka
+bird=pták
+fish=ryba
+computer=počítač
+phone=telefon
+table=stůl
+chair=židle
+window=okno
+door=dveře
+school=škola
+university=univerzita
+teacher=učitel
+student=student
+work=práce
+job=zaměstnání
+money=peníze
+bank=banka
+city=město
+village=vesnice
+country=země
+world=svět
+sun=slunce
+moon=měsíc
+star=hvězda
+ocean=oceán
+river=řeka
+mountain=hora
+forest=les
+tree=strom
+flower=květina
+garden=zahrada
+street=ulice
+road=silnice
+bridge=most
+airport=letiště
+train=vlak
+bus=autobus
+station=stanice
+ticket=lístek
+music=hudba
+song=píseň
+dance=tanec
+game=hra
+sport=sport
+football=fotbal
+basketball=basketbal
+tennis=tenis
+hockey=hokej
+run=běh
+walk=chůze
+swim=plavat
+read=číst
+write=psát
+draw=kreslit
+paint=malovat
+sing=zpívat
+eat=jíst
+drink=pít
+sleep=spát
+wake=vzbudit
