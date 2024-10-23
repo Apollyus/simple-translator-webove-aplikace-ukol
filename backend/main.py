@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
+import os
 
 class Translate(BaseModel):
     czech: str
@@ -45,11 +46,16 @@ def test(word: str):
                 return {"english": english, "czech": czech}
     return {"message": "Slovo nenalezeno"}
 
-@app.post("/translate/")
-def translate_word(request: WordRequest):
-    word = request.word
-    with open(r'C:\aa_programovani\webovy-aplikace-translator\simple-translator-webove-aplikace-ukol\backend\slovnik_cz_en.txt', 'r', encoding='utf-8') as f:
-        for line in f:
-            if word in line:
-                return line
-    return {"message": "Slovo nenalezeno"}
+@app.post("/translate")
+def translate(data: dict):
+    fpath = 'slovnik_cz_en.txt'
+    if not os.path.exists(fpath):
+        print('File does not exist')
+    else:    
+        with open(fpath, 'r', encoding='utf-8') as f:
+            _word = data.get("word")
+            for line in f:
+                if _word in line:
+                    english, czech = line.strip().split('=', 1)
+                    return {"english": english, "czech": czech}
+        return {"message": "Slovo nenalezeno"}
