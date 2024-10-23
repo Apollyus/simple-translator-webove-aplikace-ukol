@@ -51,8 +51,21 @@ function App() {
               </button>
             </div>
         )}
-        <p>CZ: {translation.czech}</p>
-        <p>EN: {translation.english}</p>
+        <div className='flex flex-col gap-2'>
+          <div className='flex items-center gap-3 rounded-xl bg-slate-100 border border-gray-300 shadow-inner py-2 px-2'>
+            <img className='h-4' src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Flag_of_the_Czech_Republic.svg" alt="" />
+            <p>
+              {translation.czech}
+            </p>
+          </div>
+          <div className='flex items-center gap-3 rounded-xl bg-slate-100 border border-gray-300 shadow-inner py-2 px-2'>
+            <img className='h-4' src="https://upload.wikimedia.org/wikipedia/commons/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg" alt="" />
+            <p>
+              {translation.english}
+            </p>
+          </div>
+        </div>
+        <div className='bg-gray-300 w-[250px] h-[1px] my-4 mx-auto'></div>
         <div className='flex flex-col w-fit gap-3 mt-4'>
           <label>
           <input
@@ -64,7 +77,7 @@ function App() {
             className='rounded-xl bg-slate-100 border border-gray-300 shadow-inner p-1 px-2'
           />
           </label>
-          <button onClick={sendTranslateRequest} className='bg-green-500 rounded-lg p-1 px-3 text-white'>Přelož</button>
+          <button onClick={sendTranslateRequest} className='bg-green-500 rounded-lg p-1 px-3 text-white font-medium'>Přeložit</button>
         </div>
       </div>
     </main>
