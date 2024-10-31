@@ -26,26 +26,6 @@ app.add_middleware(
 def root():
     return {"message": "Hello World"}
 
-@app.get("/cz_to_en/{word}")
-def read_item(word: str):
-    word = word.replace('+', ' ')
-    with open('C:\\aa_programovani\\webove-aplikace-slovnik\\backend\\slovnik_cz_en.txt', 'r', encoding='utf-8') as f:
-        for line in f:
-            if word in line:
-                english, czech = line.strip().split('=')
-                return {"english": english, "czech": czech}
-    return {"message": "Slovo nenalezeno"}
-
-@app.get("/en_to_cz/{word}")
-def test(word: str):
-    word = word.replace('+', ' ')
-    with open('C:\\aa_programovani\\webove-aplikace-slovnik\\backend\\slovnik_cz_en.txt', 'r', encoding='utf-8') as f:
-        for line in f:
-            if word in line:
-                english, czech = line.strip().split('=')
-                return {"english": english, "czech": czech}
-    return {"message": "Slovo nenalezeno"}
-
 @app.post("/translate")
 def translate(data: dict):
     fpath = 'slovnik_cz_en.txt'
@@ -59,3 +39,7 @@ def translate(data: dict):
                     english, czech = line.strip().split('=', 1)
                     return {"english": english, "czech": czech}
         return {"message": "Slovo nenalezeno"}
+    
+@app.post("/translate-v2")
+def translate_v2(data: dict):
+    return {"input": data.get("input"), "translatedText": "xxx" ,"detectedLang": "xxx"}
