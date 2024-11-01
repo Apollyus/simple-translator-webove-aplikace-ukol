@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "country-flags-svg": "^2.0.0-beta.1",
     "dotenv": "^16.4.5",
     "openai": "^4.68.4",
     "react": "^18.3.1",

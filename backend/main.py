@@ -2,6 +2,8 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import os
+import openai_v2 as oai
+import json
 
 class Translate(BaseModel):
     czech: str
@@ -42,4 +44,9 @@ def translate(data: dict):
     
 @app.post("/translate-v2")
 def translate_v2(data: dict):
-    return {"input": data.get("input"), "translatedText": "xxx" ,"detectedLang": "xxx"}
+    response = oai.translate_with_GPT(data.get("input"))
+    return {
+        "input": data.get("input"),
+        "translatedText": response.get("translated"),
+        "detectedLang": response.get("detectedLang")
+    }
