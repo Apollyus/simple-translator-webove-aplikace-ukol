@@ -57,24 +57,30 @@ export default function V2() {
   }, []);
 
   return (
-    <div id="v2" className="w-screen h-screen flex gap-5 justify-center items-center">
-      <textarea type="text" placeholder="Co přeložíme?" value={value} onChange={handleChange} className="bg-white p-2 px-3 w-[25rem] h-[15rem] rounded-2xl text-gray-600 border border-gray-200 resize-none" />
-      <div className="bg-[#f7f7f7] p-1 px-2 w-[25rem] h-[15rem] rounded-lg shadow-lg text-gray-600">
-        {loading ? (
-          <div className="h-full w-full flex justify-center items-center">
-            <div className="loader"></div>
-          </div>
-        ) : (
-          <div className="h-full w-full flex flex-col">
-            <div className="flex gap-3">
-              <img src={flagUrl} alt="" height={10} width={20}/>
-              <p className="mb-1 h-5">{data.detectedLang}</p>
+    <div id="v2" className="w-screen h-screen flex flex-col gap-5 justify-center items-center">
+      <div className="flex gap-5">
+        <textarea type="text" placeholder="Co přeložíme?" value={value} onChange={handleChange} className="bg-white p-2 px-3 w-[25rem] h-[15rem] rounded-2xl text-gray-600 border border-gray-200 resize-none" />
+        <div className="bg-[#f7f7f7] p-1 px-2 w-[25rem] h-[15rem] rounded-lg shadow-lg text-gray-600">
+          {loading ? (
+            <div className="h-full w-full flex justify-center items-center">
+              <div className="loader"></div>
             </div>
-            <div className="bg-gray-300 h-[1px] w-full"></div>
-            <p>{data.translatedText}</p>
-          </div>
-        )}
+          ) : (
+            <div className="h-full w-full flex flex-col">
+              <div className="flex gap-3">
+                <img src={flagUrl} alt="" height={10} width={20}/>
+                <p className="mb-1 h-5">{data.detectedLang}</p>
+              </div>
+              <div className="bg-gray-300 h-[1px] w-full"></div>
+              <p>{data.translatedText}</p>
+            </div>
+          )}
+        </div>
       </div>
+      <div className='flex gap-5 my-3 text-gray-600'>
+          <a href="/v2" className='text-blue-500 underline'>V1</a>
+          <p className="cursor-not-allowed">V2</p>
+        </div>
     </div>
   );
 }

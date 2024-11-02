@@ -39,7 +39,7 @@ function App() {
   };
 
   return (
-    <main className='flex justify-center items-center bg-[#fffef1] w-screen h-screen'>
+    <main className='flex flex-col justify-center items-center bg-[#fffef1] w-screen h-screen'>
       <div className='bg-white rounded-xl p-4 shadow-xl'>
         {notFound && (
             <div className='bg-red-500 flex w-auto justify-between text-white rounded-lg p-1 px-3 mb-2'>
@@ -79,6 +79,10 @@ function App() {
           </label>
           <button onClick={sendTranslateRequest} className='bg-green-500 rounded-lg p-1 px-3 text-white font-medium'>Přeložit</button>
         </div>
+      </div>
+      <div className='flex gap-5 my-3 text-gray-600'>
+        <p className='cursor-not-allowed'>V1</p>
+        <a href="/v2" className='text-blue-500 underline'>V2</a>
       </div>
     </main>
   );
