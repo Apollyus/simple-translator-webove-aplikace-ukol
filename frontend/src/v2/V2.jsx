@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef } from "react";
-import { findFlagUrlByCountryName } from "country-flags-svg";
+import { countries, findFlagUrlByCountryName, findFlagUrlByIso2Code } from "country-flags-svg";
 import "../index.css"
 
 export default function V2() {
@@ -21,7 +21,11 @@ export default function V2() {
       } else {
         const data = await response.json();
         setData(data);
-        setFlagUrl(findFlagUrlByCountryName(data.detectedLang));
+        const _detectedLang = String(data.detectedLang);
+        const _flagUrl = findFlagUrlByIso2Code(_detectedLang);
+        console.log(_flagUrl);
+        setFlagUrl(_flagUrl);
+        console.log(flagUrl);
         setLoading(false);
       }
     } catch (error) {
@@ -42,6 +46,8 @@ export default function V2() {
     }, 2000);
   };
 
+  console.log("test", flagUrl);
+
   useEffect(() => {
     return () => {
       if (timerRef.current) {
@@ -50,32 +56,22 @@ export default function V2() {
     };
   }, []);
 
-  /*if(!data){
-    return(
-      <div id="v2" className="w-screen h-screen flex flex-col justify-center items-center">
-        <div className="loader"></div> 
-      </div>
-    )
-  }*/
-
   return (
     <div id="v2" className="w-screen h-screen flex gap-5 justify-center items-center">
-      <textarea type="text" placeholder="Type something" value={value} onChange={handleChange} className="bg-white p-2 px-3 w-[25rem] h-[15rem] rounded-2xl shadow-lg text-gray-600 border border-gray-200 resize-none" />
+      <textarea type="text" placeholder="Co přeložíme?" value={value} onChange={handleChange} className="bg-white p-2 px-3 w-[25rem] h-[15rem] rounded-2xl text-gray-600 border border-gray-200 resize-none" />
       <div className="bg-[#f7f7f7] p-1 px-2 w-[25rem] h-[15rem] rounded-lg shadow-lg text-gray-600">
         {loading ? (
           <div className="h-full w-full flex justify-center items-center">
             <div className="loader"></div>
           </div>
         ) : (
-          <div className="h-full w-full flex flex-col justify-center items-center">
-            <div className="h-full w-full">
-            {data.detectedLang === "Czech" && (
+          <div className="h-full w-full flex flex-col">
+            <div className="flex gap-3">
               <img src={flagUrl} alt="" height={10} width={20}/>
-            )}
-            <p className="mb-1 h-5">{data.detectedLang}</p>
+              <p className="mb-1 h-5">{data.detectedLang}</p>
+            </div>
             <div className="bg-gray-300 h-[1px] w-full"></div>
             <p>{data.translatedText}</p>
-            </div>
           </div>
         )}
       </div>

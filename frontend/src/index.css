@@ -25,9 +25,6 @@ body{
       80%{background-position:0%  50%, 50%  50%,100% 100%}
   }
 
-input::placeholder {
-  text-align: left;
-  padding-top: 0;
-  padding-left: 0;
+#v2 textarea {
+  box-shadow: inset 0px 0px 10px rgba(80, 80, 80, 0.3);
 }
-
