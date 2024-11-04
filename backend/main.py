@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import os
@@ -6,7 +6,7 @@ import openai_v2 as oai
 import json
 import requests
 
-weather_api_key = os.environ.get("OPENWEATHER_API_KEY")
+weatherapi_api = os.environ.get("WEATHERAPI_API") # weatherapi.com
 
 class Translate(BaseModel):
     czech: str
@@ -57,13 +57,11 @@ def translate_v2(data: dict):
 @app.post("/weather")
 def weather(data: dict):
     city = data.get("city")
-    state_code = data.get("state_code")
-    country_code = data.get("country_code")
-    url = f"http://api.openweathermap.org/geo/1.0/direct?q={city},{state_code},{country_code}&appid={weather_api_key}"
-
+    url = f"http://api.weatherapi.com/v1/current.json?key={weatherapi_api}&q={city}&aqi=no"
     headers = {"Content-Type": "application/json"}
     response = requests.get(url, headers=headers)
+    response_data = response.json()
     if response.status_code == 200:
-        return response.json()
+        return response_data
     else:
-        return {"message": "Error", "status_code": response.status_code, "response": response.json()}
+        raise HTTPException(status_code=response.status_code, detail="Error fetching weather data")

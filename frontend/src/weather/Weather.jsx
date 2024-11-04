@@ -8,7 +8,7 @@ export default function Weather() {
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({ city: "New York" }) // Replace with the actual data you want to send
+            body: JSON.stringify({ city: "London", state_code: "GB", city_code: "GB-BDG" })
         });
         const data = await response.json();
         console.log(data);
@@ -17,8 +17,10 @@ export default function Weather() {
     getWeather();
 
     return(
-        <>
-            <h1>Hello world</h1>
-        </>
+        <div className="h-screen w-screen flex justify-center items-center">
+            <div className="bg-white">
+                <h1 className="text-4xl font-bold">Weather</h1>
+            </div>
+        </div>
     );
 }

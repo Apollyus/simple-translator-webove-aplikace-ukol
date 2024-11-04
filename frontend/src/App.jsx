@@ -83,6 +83,8 @@ function App() {
       <div className='flex gap-5 my-3 text-gray-600'>
         <p className='cursor-not-allowed'>V1</p>
         <a href="/v2" className='text-blue-500 underline'>V2</a>
+        <a href="/v2" className='text-blue-500 underline'>V2</a>
+        <a href="/weather" className='text-blue-500 underline'>Weather</a>
       </div>
     </main>
   );
