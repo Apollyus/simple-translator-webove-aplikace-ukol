@@ -61,6 +61,7 @@ def weather(data: dict):
     headers = {"Content-Type": "application/json"}
     response = requests.get(url, headers=headers)
     response_data = response.json()
+    print(response_data)
     if response.status_code == 200:
         return response_data
     else:

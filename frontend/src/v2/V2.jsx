@@ -80,6 +80,7 @@ export default function V2() {
       <div className='flex gap-5 my-3 text-gray-600'>
           <a href="/" className='text-blue-500 underline'>V1</a>
           <p className="cursor-not-allowed">V2</p>
+          <a href="/weather" className='text-blue-500 underline'>Weather</a>
         </div>
     </div>
   );

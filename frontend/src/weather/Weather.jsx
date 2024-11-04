@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import FullCard from "./WeatherCard";
 
 export default function Weather() {
+    const [data, setData] = useState("");
+    const [inputCity, setInputCity] = useState("");
 
     const getWeather = async () => {
         const response = await fetch("http://localhost:8000/weather", {
@@ -8,18 +11,26 @@ export default function Weather() {
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({ city: "London", state_code: "GB", city_code: "GB-BDG" })
+            body: JSON.stringify({ city: inputCity })
         });
         const data = await response.json();
-        console.log(data);
+        setData(data);
+        console.log("fe", data);
     }
 
-    getWeather();
+    const setInputCityFunc = (event) => {
+        setInputCity(event.target.value);
+    }
 
     return(
-        <div className="h-screen w-screen flex justify-center items-center">
-            <div className="bg-white">
-                <h1 className="text-4xl font-bold">Weather</h1>
+        <div className="bg-[#dcebff] h-screen w-screen flex justify-center items-center">
+            <div className="bg-white h-[15rem] w-[35rem] flex justify-between rounded-xl shadow-xl">
+                { data ? <FullCard data={data} /> : 
+                <div className="h-full w-full flex gap-5 justify-center items-center ">
+                    <input type="text" value={inputCity} onChange={setInputCityFunc} placeholder="Napiš město" className="bg-gray-100 h-9 border border-gray-300 rounded-lg p-2 px-3"/>
+                    <button onClick={getWeather} className="h-9 px-3 rounded-lg bg-blue-500 text-white">Hledat</button>
+                </div>
+                }
             </div>
         </div>
     );
