@@ -22,10 +22,15 @@ export default function Weather() {
         setInputCity(event.target.value);
     }
 
+    const handlebackButton = () => {
+        setInputCity("");
+        setData("");
+    }
+
     return(
         <div className="bg-[#dcebff] h-screen w-screen flex justify-center items-center">
             <div className="bg-white h-[15rem] w-[35rem] flex justify-between rounded-xl shadow-xl">
-                { data ? <FullCard data={data} /> : 
+                { data ? <FullCard data={data} backButton={handlebackButton}/> : 
                 <div className="h-full w-full flex gap-5 justify-center items-center ">
                     <input type="text" value={inputCity} onChange={setInputCityFunc} placeholder="Napiš město" className="bg-gray-100 h-9 border border-gray-300 rounded-lg p-2 px-3"/>
                     <button onClick={getWeather} className="h-9 px-3 rounded-lg bg-blue-500 text-white">Hledat</button>
